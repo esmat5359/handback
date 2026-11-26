@@ -1,0 +1,336 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "accept_loan": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ],
+        [
+          "inventory_hash_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "cancel_offer": {
+      "params": [
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "deposit_credit": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": true
+    },
+    "expire_offer": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "file_claim": {
+      "params": [
+        [
+          "loan_id",
+          "string"
+        ],
+        [
+          "claimed_mask",
+          "int"
+        ],
+        [
+          "report_url_text",
+          "string"
+        ],
+        [
+          "report_hash_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_accounting": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_available_credit": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_claim": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_info": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_loan": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_loan_count": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_loan_ref": {
+      "params": [
+        [
+          "index",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "hand_back": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ],
+        [
+          "report_url_text",
+          "string"
+        ],
+        [
+          "report_hash_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "open_loan": {
+      "params": [
+        [
+          "loan_id",
+          "string"
+        ],
+        [
+          "holder_text",
+          "string"
+        ],
+        [
+          "title_text",
+          "string"
+        ],
+        [
+          "summary_text",
+          "string"
+        ],
+        [
+          "inventory_url_text",
+          "string"
+        ],
+        [
+          "inventory_hash_text",
+          "string"
+        ],
+        [
+          "item_count",
+          "int"
+        ],
+        [
+          "caps_text",
+          "string"
+        ],
+        [
+          "deposit_wei",
+          "int"
+        ],
+        [
+          "stake_wei",
+          "int"
+        ],
+        [
+          "accept_by",
+          "int"
+        ],
+        [
+          "return_by",
+          "int"
+        ],
+        [
+          "claim_window",
+          "int"
+        ],
+        [
+          "respond_window",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "release_loan": {
+      "params": [
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "respond_to_claim": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ],
+        [
+          "accepted_mask",
+          "int"
+        ],
+        [
+          "report_url_text",
+          "string"
+        ],
+        [
+          "report_hash_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "review_claim": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "settle_loan": {
+      "params": [
+        [
+          "owner_text",
+          "string"
+        ],
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "withdraw_claim": {
+      "params": [
+        [
+          "loan_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "withdraw_credit": {
+      "params": [],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}
