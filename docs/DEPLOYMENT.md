@@ -64,7 +64,7 @@ Real LLM output is probabilistic: a `FAIL` on a semantic check (A, B, F rulings)
 | Field | Value |
 | --- | --- |
 | Version | 0.1.0 |
-| Address | _not deployed yet_ |
-| Deploy transaction | _not deployed yet_ |
+| Address | [`0x241D5b8077498eA5572264Ea060643C5Ee377aE1`](https://explorer-studio.genlayer.com/address/0x241D5b8077498eA5572264Ea060643C5Ee377aE1) |
+| Deploy transaction | Deployed via GenLayer Studio on Studionet (see explorer address history) |
 | Source SHA-256 | `0b3f399d0c17f1fc33d5f985a97cb15a028718e394315b51b1def873cd1824c2` (printed by `scripts/preflight.py`) |
-| Live report | _not run yet_ |
+| Live report | [`reports/live-e2e-20261126T144417Z.md`](../reports/live-e2e-20261126T144417Z.md) ([JSON](../reports/live-e2e-20261126T144417Z.json)) — 127/127 checks passed |

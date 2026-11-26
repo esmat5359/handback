@@ -1,0 +1,1924 @@
+{
+  "started": "2026-11-26T13:56:31Z",
+  "finished": "2026-11-26T14:44:17Z",
+  "contract": "0x241D5b8077498eA5572264Ea060643C5Ee377aE1",
+  "fixture_base_url": "https://raw.githubusercontent.com/esmat5359/handback/5847e80bddb9e9a73cad394b65edea262ddd2594/fixtures/live/",
+  "environment": {
+    "python": "3.12.16",
+    "platform": "Linux-6.8.0-1070-azure-x86_64-with-glibc2.41",
+    "network": "studionet",
+    "git_commit": "5847e80bddb9e9a73cad394b65edea262ddd2594",
+    "contract_sha256": "0b3f399d0c17f1fc33d5f985a97cb15a028718e394315b51b1def873cd1824c2",
+    "genlayer-py": "0.19.1",
+    "genlayer-test": "not installed",
+    "contract_version": "0.1.0"
+  },
+  "passed": 127,
+  "failed": 0,
+  "fatal": "",
+  "checks": [
+    {
+      "name": "contract answers get_info as Handback",
+      "passed": true,
+      "expected": "Handback",
+      "observed": "Handback",
+      "section": "0. Preflight"
+    },
+    {
+      "name": "owner holds enough GEN (0.03180)",
+      "passed": true,
+      "expected": ">= 31800000000000000",
+      "observed": "65567287999975898",
+      "section": "1. Funding"
+    },
+    {
+      "name": "holder holds enough GEN (0.04200)",
+      "passed": true,
+      "expected": ">= 42000000000000000",
+      "observed": "105907995999977192",
+      "section": "1. Funding"
+    },
+    {
+      "name": "stranger holds enough GEN (0.03000)",
+      "passed": true,
+      "expected": ">= 30000000000000000",
+      "observed": "59335091999990477",
+      "section": "1. Funding"
+    },
+    {
+      "name": "an owner cannot lend to itself: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "2. Offers"
+    },
+    {
+      "name": "an owner cannot lend to itself: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "2. Offers"
+    },
+    {
+      "name": "loan A is offered with the committed terms",
+      "passed": true,
+      "expected": "offered, caps/deposit/stake/hash as sent",
+      "observed": "offered",
+      "section": "2. Offers"
+    },
+    {
+      "name": "loan B is offered with the committed terms",
+      "passed": true,
+      "expected": "offered, caps/deposit/stake/hash as sent",
+      "observed": "offered",
+      "section": "2. Offers"
+    },
+    {
+      "name": "loan C is offered with the committed terms",
+      "passed": true,
+      "expected": "offered, caps/deposit/stake/hash as sent",
+      "observed": "offered",
+      "section": "2. Offers"
+    },
+    {
+      "name": "loan D is offered with the committed terms",
+      "passed": true,
+      "expected": "offered, caps/deposit/stake/hash as sent",
+      "observed": "offered",
+      "section": "2. Offers"
+    },
+    {
+      "name": "loan E is offered with the committed terms",
+      "passed": true,
+      "expected": "offered, caps/deposit/stake/hash as sent",
+      "observed": "offered",
+      "section": "2. Offers"
+    },
+    {
+      "name": "loan F is offered with the committed terms",
+      "passed": true,
+      "expected": "offered, caps/deposit/stake/hash as sent",
+      "observed": "offered",
+      "section": "2. Offers"
+    },
+    {
+      "name": "one stake locked per offer (change since run start)",
+      "passed": true,
+      "expected": "1800000000000000",
+      "observed": "1800000000000000",
+      "section": "2. Offers"
+    },
+    {
+      "name": "owner credit fully allocated",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "2. Offers"
+    },
+    {
+      "name": "a stranger cannot accept someone else's offer: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "a stranger cannot accept someone else's offer: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "accepting with the wrong inventory hash: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "accepting with the wrong inventory hash: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "loan A is active",
+      "passed": true,
+      "expected": "active",
+      "observed": "active",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "loan B is active",
+      "passed": true,
+      "expected": "active",
+      "observed": "active",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "loan C is active",
+      "passed": true,
+      "expected": "active",
+      "observed": "active",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "loan D is active",
+      "passed": true,
+      "expected": "active",
+      "observed": "active",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "loan E is active",
+      "passed": true,
+      "expected": "active",
+      "observed": "active",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "loan F is active",
+      "passed": true,
+      "expected": "active",
+      "observed": "active",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "one deposit locked per loan (change since run start)",
+      "passed": true,
+      "expected": "12000000000000000",
+      "observed": "12000000000000000",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "accepting an already active loan: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "accepting an already active loan: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "3. Acceptance"
+    },
+    {
+      "name": "the owner cannot hand back on the holder's behalf: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "the owner cannot hand back on the holder's behalf: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "a report needs both a URL and a hash: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "a report needs both a URL and a hash: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "handing back twice: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "handing back twice: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "a stranger cannot release a deposit: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "a stranger cannot release a deposit: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "the holder cannot release its own deposit: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "the holder cannot release its own deposit: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan A records the return",
+      "passed": true,
+      "expected": "returned_at > 0",
+      "observed": "1795702224",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan B records the return",
+      "passed": true,
+      "expected": "returned_at > 0",
+      "observed": "1795702262",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan C records the return",
+      "passed": true,
+      "expected": "returned_at > 0",
+      "observed": "1795702303",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan D records the return",
+      "passed": true,
+      "expected": "returned_at > 0",
+      "observed": "1795702344",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan E records the return",
+      "passed": true,
+      "expected": "returned_at > 0",
+      "observed": "1795702381",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan A holder report is committed at hand-back",
+      "passed": true,
+      "expected": "0xee0fc544b1c9724d16ac5ee3b1e7d8e111f01f024eb1f29c7db9d14b89f99e8d",
+      "observed": "0xee0fc544b1c9724d16ac5ee3b1e7d8e111f01f024eb1f29c7db9d14b89f99e8d",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan B holder report is committed at hand-back",
+      "passed": true,
+      "expected": "0x849fe5fee06c722cfcdd86e7d74899ea4d1bca481110588c19c4d81af9502f2d",
+      "observed": "0x849fe5fee06c722cfcdd86e7d74899ea4d1bca481110588c19c4d81af9502f2d",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan C holder report is committed at hand-back",
+      "passed": true,
+      "expected": "0x849fe5fee06c722cfcdd86e7d74899ea4d1bca481110588c19c4d81af9502f2d",
+      "observed": "0x849fe5fee06c722cfcdd86e7d74899ea4d1bca481110588c19c4d81af9502f2d",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan D holder report is committed at hand-back",
+      "passed": true,
+      "expected": "0x849fe5fee06c722cfcdd86e7d74899ea4d1bca481110588c19c4d81af9502f2d",
+      "observed": "0x849fe5fee06c722cfcdd86e7d74899ea4d1bca481110588c19c4d81af9502f2d",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "loan E settled by owner release",
+      "passed": true,
+      "expected": "settled / released_by_owner / 0 deducted",
+      "observed": "settled / released_by_owner / 0",
+      "section": "4. Return and release"
+    },
+    {
+      "name": "claiming before the due date without a return: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "5. Claims"
+    },
+    {
+      "name": "claiming before the due date without a return: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the holder cannot file a claim: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the holder cannot file a claim: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "5. Claims"
+    },
+    {
+      "name": "claiming an item that does not exist: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "5. Claims"
+    },
+    {
+      "name": "claiming an item that does not exist: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "5. Claims"
+    },
+    {
+      "name": "an empty claim: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "5. Claims"
+    },
+    {
+      "name": "an empty claim: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "5. Claims"
+    },
+    {
+      "name": "loan A claim recorded",
+      "passed": true,
+      "expected": "claimed [2, 3, 4, 5]",
+      "observed": "claimed [2, 3, 4, 5]",
+      "section": "5. Claims"
+    },
+    {
+      "name": "loan B claim recorded",
+      "passed": true,
+      "expected": "claimed [1, 2]",
+      "observed": "claimed [1, 2]",
+      "section": "5. Claims"
+    },
+    {
+      "name": "loan C claim recorded",
+      "passed": true,
+      "expected": "claimed [1, 2]",
+      "observed": "claimed [1, 2]",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the owner cannot claim twice: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the owner cannot claim twice: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the holder cannot attach a second report: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the holder cannot attach a second report: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "5. Claims"
+    },
+    {
+      "name": "the owner cannot respond for the holder: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "6. Responses"
+    },
+    {
+      "name": "the owner cannot respond for the holder: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "6. Responses"
+    },
+    {
+      "name": "accepting an item that was never claimed: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "6. Responses"
+    },
+    {
+      "name": "accepting an item that was never claimed: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "6. Responses"
+    },
+    {
+      "name": "loan A disputed items",
+      "passed": true,
+      "expected": "[2, 3, 4]",
+      "observed": "[2, 3, 4]",
+      "section": "6. Responses"
+    },
+    {
+      "name": "loan B disputed items",
+      "passed": true,
+      "expected": "[1, 2]",
+      "observed": "[1, 2]",
+      "section": "6. Responses"
+    },
+    {
+      "name": "loan C disputed items",
+      "passed": true,
+      "expected": "[1, 2]",
+      "observed": "[1, 2]",
+      "section": "6. Responses"
+    },
+    {
+      "name": "responding twice: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "6. Responses"
+    },
+    {
+      "name": "responding twice: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "6. Responses"
+    },
+    {
+      "name": "a stranger cannot request a review: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "6. Responses"
+    },
+    {
+      "name": "a stranger cannot request a review: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "6. Responses"
+    },
+    {
+      "name": "loan A ruled 'ruled'",
+      "passed": true,
+      "expected": "ruled",
+      "observed": "ruled (confidence 93, owner_attempt=no, holder_attempt=no, reason=-)",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "loan B ruled 'owner_foul'",
+      "passed": true,
+      "expected": "owner_foul",
+      "observed": "owner_foul (confidence 90, owner_attempt=yes, holder_attempt=no, reason=-)",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "loan C ruled 'owner_evidence_tampered'",
+      "passed": true,
+      "expected": "owner_evidence_tampered",
+      "observed": "owner_evidence_tampered (confidence 0, owner_attempt=-, holder_attempt=-, reason=owner:hash_mismatch)",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "loan A: only item I2 is ruled damaged (I3 pre-existing, I4 ordinary wear)",
+      "passed": true,
+      "expected": "2",
+      "observed": "2",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "loan C: the mismatch is blamed on the owner's report",
+      "passed": true,
+      "expected": "owner:hash_mismatch",
+      "observed": "owner:hash_mismatch",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "a decisive ruling cannot be re-rolled: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "a decisive ruling cannot be re-rolled: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "the owner cannot withdraw a ruled claim: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "the owner cannot withdraw a ruled claim: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "7. Validator review"
+    },
+    {
+      "name": "loan A settled as 'review_ruled'",
+      "passed": true,
+      "expected": "settled / review_ruled",
+      "observed": "settled / review_ruled",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan A deducted exactly the agreed caps",
+      "passed": true,
+      "expected": "450000000000000 wei, items [2, 5]",
+      "observed": "450000000000000 wei, items [2, 5]",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan A returned the rest of the deposit",
+      "passed": true,
+      "expected": "1550000000000000",
+      "observed": "1550000000000000",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan A stake forfeited: False",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan B settled as 'review_owner_foul'",
+      "passed": true,
+      "expected": "settled / review_owner_foul",
+      "observed": "settled / review_owner_foul",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan B deducted exactly the agreed caps",
+      "passed": true,
+      "expected": "0 wei, items []",
+      "observed": "0 wei, items []",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan B returned the rest of the deposit",
+      "passed": true,
+      "expected": "2000000000000000",
+      "observed": "2000000000000000",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan B stake forfeited: False",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan C settled as 'review_owner_evidence_tampered'",
+      "passed": true,
+      "expected": "settled / review_owner_evidence_tampered",
+      "observed": "settled / review_owner_evidence_tampered",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan C deducted exactly the agreed caps",
+      "passed": true,
+      "expected": "0 wei, items []",
+      "observed": "0 wei, items []",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan C returned the rest of the deposit",
+      "passed": true,
+      "expected": "2000000000000000",
+      "observed": "2000000000000000",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan C stake forfeited: True",
+      "passed": true,
+      "expected": "300000000000000",
+      "observed": "300000000000000",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "settling a second time: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "settling a second time: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "a settled loan cannot be reviewed again: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "a settled loan cannot be reviewed again: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "8. Settlement of reviewed loans"
+    },
+    {
+      "name": "loan F claim recorded with a response deadline",
+      "passed": true,
+      "expected": "items [3], respond_by set",
+      "observed": "[3], respond_by=1795703973",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "reviewing before the response window ends: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "reviewing before the response window ends: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "settling loan D while its claim window is open: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "settling loan D while its claim window is open: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan D settled as 'no_claim_deposit_returned'",
+      "passed": true,
+      "expected": "settled / no_claim_deposit_returned",
+      "observed": "settled / no_claim_deposit_returned",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan D deducted exactly the agreed caps",
+      "passed": true,
+      "expected": "0 wei, items []",
+      "observed": "0 wei, items []",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan D returned the rest of the deposit",
+      "passed": true,
+      "expected": "2000000000000000",
+      "observed": "2000000000000000",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan D stake forfeited: False",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "responding after the window: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "responding after the window: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan F ruled 'ruled'",
+      "passed": true,
+      "expected": "ruled",
+      "observed": "ruled (confidence 95, owner_attempt=no, holder_attempt=no, reason=-)",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan F: the unanswered claim is ruled on item I3 alone",
+      "passed": true,
+      "expected": "4",
+      "observed": "4",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan F settled as 'review_ruled'",
+      "passed": true,
+      "expected": "settled / review_ruled",
+      "observed": "settled / review_ruled",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan F deducted exactly the agreed caps",
+      "passed": true,
+      "expected": "250000000000000 wei, items [3]",
+      "observed": "250000000000000 wei, items [3]",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan F returned the rest of the deposit",
+      "passed": true,
+      "expected": "1750000000000000",
+      "observed": "1750000000000000",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "loan F stake forfeited: False",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "9. Silent holder and unclaimed loan"
+    },
+    {
+      "name": "owner ledger credit equals the sum of loan outcomes",
+      "passed": true,
+      "expected": "2200000000000000",
+      "observed": "2200000000000000",
+      "section": "10. Conservation"
+    },
+    {
+      "name": "holder ledger credit equals the sum of loan outcomes",
+      "passed": true,
+      "expected": "11600000000000000",
+      "observed": "11600000000000000",
+      "section": "10. Conservation"
+    },
+    {
+      "name": "all deposited value is accounted for between the two sides",
+      "passed": true,
+      "expected": "13800000000000000",
+      "observed": "13800000000000000",
+      "section": "10. Conservation"
+    },
+    {
+      "name": "nothing from this run is still locked (change since run start)",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "10. Conservation"
+    },
+    {
+      "name": "contract balance covers every liability",
+      "passed": true,
+      "expected": "True",
+      "observed": "True",
+      "section": "10. Conservation"
+    },
+    {
+      "name": "owner received 2200000000000000 wei",
+      "passed": true,
+      "expected": "2200000000000000",
+      "observed": "2200000000000000",
+      "section": "11. Native GEN withdrawals"
+    },
+    {
+      "name": "owner ledger credit cleared",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "11. Native GEN withdrawals"
+    },
+    {
+      "name": "holder received 11600000000000000 wei",
+      "passed": true,
+      "expected": "11600000000000000",
+      "observed": "11600000000000000",
+      "section": "11. Native GEN withdrawals"
+    },
+    {
+      "name": "holder ledger credit cleared",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "11. Native GEN withdrawals"
+    },
+    {
+      "name": "a stranger has nothing to withdraw: rejected",
+      "passed": true,
+      "expected": "FINISHED_WITH_ERROR (or refused at submission)",
+      "observed": "FINISHED_WITH_ERROR",
+      "section": "11. Native GEN withdrawals"
+    },
+    {
+      "name": "a stranger has nothing to withdraw: books unchanged",
+      "passed": true,
+      "expected": "unchanged",
+      "observed": "unchanged",
+      "section": "11. Native GEN withdrawals"
+    },
+    {
+      "name": "no liabilities remain from this run (change since run start)",
+      "passed": true,
+      "expected": "0",
+      "observed": "0",
+      "section": "11. Native GEN withdrawals"
+    }
+  ],
+  "transactions": [
+    {
+      "label": "owner deposits one stake per offer",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "deposit_credit",
+      "tx_hash": "0x4cd3775e54617bb922b590e3957d22ad750528391bc2812fdd6a7569d1ff149f",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.8,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x4cd3775e54617bb922b590e3957d22ad750528391bc2812fdd6a7569d1ff149f"
+    },
+    {
+      "label": "an owner cannot lend to itself",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0xdd5899e40dcacb5db29c4199fa93e56a56b3cb6772e1b6970706149bf53ba87f",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 37.1,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xdd5899e40dcacb5db29c4199fa93e56a56b3cb6772e1b6970706149bf53ba87f"
+    },
+    {
+      "label": "open loan A",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0x43337f2b394586674a34e16dfa31bef633e20a5b3facfaa0c10e04ba528581a0",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.3,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x43337f2b394586674a34e16dfa31bef633e20a5b3facfaa0c10e04ba528581a0"
+    },
+    {
+      "label": "open loan B",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0xed566cffe875bba9f63b137b2e353121b6f4e61d2e92932ecffa9807c7df9649",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 39.2,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xed566cffe875bba9f63b137b2e353121b6f4e61d2e92932ecffa9807c7df9649"
+    },
+    {
+      "label": "open loan C",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0x3be9ad6387d39e608296dbfc2d1026ff81034ce29c16020bccd24b7d5e6010af",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 39.6,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000001058,
+      "link": "https://explorer-studio.genlayer.com/tx/0x3be9ad6387d39e608296dbfc2d1026ff81034ce29c16020bccd24b7d5e6010af"
+    },
+    {
+      "label": "open loan D",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0x51bc8d10ac6479716afe735b9a04b7a12f4a7eb669c6344c28e6ef00f6650207",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.0,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x51bc8d10ac6479716afe735b9a04b7a12f4a7eb669c6344c28e6ef00f6650207"
+    },
+    {
+      "label": "open loan E",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0x81050315201fc6edb98e83bcd1f7f21361ed2de6e9c895d6f3a8e9636c2369a5",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x81050315201fc6edb98e83bcd1f7f21361ed2de6e9c895d6f3a8e9636c2369a5"
+    },
+    {
+      "label": "open loan F",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "open_loan",
+      "tx_hash": "0x2435094bae0eb1ac23ef4cceeac5a058fdffe72ae0c360762e9be56845358703",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 36.0,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x2435094bae0eb1ac23ef4cceeac5a058fdffe72ae0c360762e9be56845358703"
+    },
+    {
+      "label": "a stranger cannot accept someone else's offer",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "accept_loan",
+      "tx_hash": "0x274a50151bfbffe4261389b85c8044350bff972bcbc60fea36d91a087fca254f",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 40.3,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x274a50151bfbffe4261389b85c8044350bff972bcbc60fea36d91a087fca254f"
+    },
+    {
+      "label": "holder deposits one deposit per loan",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "deposit_credit",
+      "tx_hash": "0x91caaedf59919d16bc896bd473fd6a3639be41d7d9142603448ff3a74262083e",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 38.5,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x91caaedf59919d16bc896bd473fd6a3639be41d7d9142603448ff3a74262083e"
+    },
+    {
+      "label": "accepting with the wrong inventory hash",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0x7d69fc7e010de9eef63591c840a74629b29d50fb938cc77d9927a09d4f7e3716",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 38.7,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000001058,
+      "link": "https://explorer-studio.genlayer.com/tx/0x7d69fc7e010de9eef63591c840a74629b29d50fb938cc77d9927a09d4f7e3716"
+    },
+    {
+      "label": "holder accepts loan A",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0xb64a462feeb5adbcaa7af9acf3342f31ece992e55ae589fe1621c10d06eeef1e",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.5,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xb64a462feeb5adbcaa7af9acf3342f31ece992e55ae589fe1621c10d06eeef1e"
+    },
+    {
+      "label": "holder accepts loan B",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0x0dc75be6a354d105049be523daf333120f9abaa32a5c8d75679c004954b04a81",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 38.8,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x0dc75be6a354d105049be523daf333120f9abaa32a5c8d75679c004954b04a81"
+    },
+    {
+      "label": "holder accepts loan C",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0x7d704bff94a85b72fbb99c5c9dfe7ca98042e63d09710ac3ab920830c9278eb4",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.5,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000001058,
+      "link": "https://explorer-studio.genlayer.com/tx/0x7d704bff94a85b72fbb99c5c9dfe7ca98042e63d09710ac3ab920830c9278eb4"
+    },
+    {
+      "label": "holder accepts loan D",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0x2c616f7247a4f03161b7e9443485b10a198b11202d0f57291bf9e00f0f292393",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x2c616f7247a4f03161b7e9443485b10a198b11202d0f57291bf9e00f0f292393"
+    },
+    {
+      "label": "holder accepts loan E",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0x3a116a853b16f8118f5631a1795231f2011ceed28536a1d3d9e6ef077ff3d7bc",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 40.8,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x3a116a853b16f8118f5631a1795231f2011ceed28536a1d3d9e6ef077ff3d7bc"
+    },
+    {
+      "label": "holder accepts loan F",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0xdba37aaee0cecabe378847d3efb489936908feb95aaa4b0a4d69e9570d88ac99",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.2,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xdba37aaee0cecabe378847d3efb489936908feb95aaa4b0a4d69e9570d88ac99"
+    },
+    {
+      "label": "accepting an already active loan",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "accept_loan",
+      "tx_hash": "0x11ce12f34b1fbcc3ac0bc5ddb747f6a59b0ccd1c9df2cfde16edf6ea64129b7f",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.7,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x11ce12f34b1fbcc3ac0bc5ddb747f6a59b0ccd1c9df2cfde16edf6ea64129b7f"
+    },
+    {
+      "label": "the owner cannot hand back on the holder's behalf",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "hand_back",
+      "tx_hash": "0xe430176069b0bec5d24cf7ade0076fdee2e62a1f22e4bc96a02cde748655b8b9",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.4,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xe430176069b0bec5d24cf7ade0076fdee2e62a1f22e4bc96a02cde748655b8b9"
+    },
+    {
+      "label": "a report needs both a URL and a hash",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0xc220ff0919ba8ae08b16b9362e0c1df6cd4b7e148e03a2fa557efed5f9c0707b",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 40.4,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xc220ff0919ba8ae08b16b9362e0c1df6cd4b7e148e03a2fa557efed5f9c0707b"
+    },
+    {
+      "label": "holder hands back loan A",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0x3af61690fd189bf5ed8b4b28047cdf7f1e0b415b28b7781b26aef146ea2d5318",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 38.9,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x3af61690fd189bf5ed8b4b28047cdf7f1e0b415b28b7781b26aef146ea2d5318"
+    },
+    {
+      "label": "holder hands back loan B",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0x50106010e963e89ca72af37a3af16d07e749a3101d0ff6b393880336174c5543",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.5,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x50106010e963e89ca72af37a3af16d07e749a3101d0ff6b393880336174c5543"
+    },
+    {
+      "label": "holder hands back loan C",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0x0d5948b5323ab852a2e1b82bacfb1b5a708bce8aa450cd8c53bb34fc416d4568",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 40.6,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x0d5948b5323ab852a2e1b82bacfb1b5a708bce8aa450cd8c53bb34fc416d4568"
+    },
+    {
+      "label": "holder hands back loan D",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0x0a7685dccb5e8adb0eb53a1b0ae75c2f27140726541bb9ffec001c80258ac1c4",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.1,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x0a7685dccb5e8adb0eb53a1b0ae75c2f27140726541bb9ffec001c80258ac1c4"
+    },
+    {
+      "label": "holder hands back loan E",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0x4d02cae93a39d8259471d5ef9426b11ebc18e2e7620064d8b8935ae1413c6563",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.5,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x4d02cae93a39d8259471d5ef9426b11ebc18e2e7620064d8b8935ae1413c6563"
+    },
+    {
+      "label": "handing back twice",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0xbd8f8b1feef0615d3c97d9dc3b01e10bd0d30642e7976a51cf8b8e498ce4af27",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 42.9,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xbd8f8b1feef0615d3c97d9dc3b01e10bd0d30642e7976a51cf8b8e498ce4af27"
+    },
+    {
+      "label": "a stranger cannot release a deposit",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "release_loan",
+      "tx_hash": "0x39b97a01d4cbd138ca4f7e83a81ab121930e57a7c067501f57e69a96bc5a2702",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 37.5,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x39b97a01d4cbd138ca4f7e83a81ab121930e57a7c067501f57e69a96bc5a2702"
+    },
+    {
+      "label": "the holder cannot release its own deposit",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "release_loan",
+      "tx_hash": "0xb38a83b47335339d830f15d3a6b2cf2e3ca94098b64d903b55287569e8619448",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 38.1,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xb38a83b47335339d830f15d3a6b2cf2e3ca94098b64d903b55287569e8619448"
+    },
+    {
+      "label": "owner releases loan E early",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "release_loan",
+      "tx_hash": "0x316afb4a291e869a2252adda999c7f06d5b8455ee45f1d0e3c534f023dc3da28",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 43.6,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x316afb4a291e869a2252adda999c7f06d5b8455ee45f1d0e3c534f023dc3da28"
+    },
+    {
+      "label": "claiming before the due date without a return",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0xa42e02d133af4435c00187e9b3551d8a80412d9b4171496264e9edf493880e43",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 37.6,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xa42e02d133af4435c00187e9b3551d8a80412d9b4171496264e9edf493880e43"
+    },
+    {
+      "label": "the holder cannot file a claim",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "file_claim",
+      "tx_hash": "0x3c41b50afb0b2f3be5082fabdc396b056d6fa40aecaa35b3c2e92091a467eab7",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 38.0,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x3c41b50afb0b2f3be5082fabdc396b056d6fa40aecaa35b3c2e92091a467eab7"
+    },
+    {
+      "label": "claiming an item that does not exist",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0xaba73bbe22f28e78204dee3b5c67a872761e7117f3eb378d9c114cd00d24b2e8",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 38.0,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xaba73bbe22f28e78204dee3b5c67a872761e7117f3eb378d9c114cd00d24b2e8"
+    },
+    {
+      "label": "an empty claim",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0xf4620fad21f6b162170082388aad99734fb5ea75756f64f3abaae40312acc91b",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 38.9,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xf4620fad21f6b162170082388aad99734fb5ea75756f64f3abaae40312acc91b"
+    },
+    {
+      "label": "owner claims on loan A",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0x4757ec87def3c127aefce6d93e2338c712fe950027ba55b7f2a28f9f8d4471ca",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 38.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000001058,
+      "link": "https://explorer-studio.genlayer.com/tx/0x4757ec87def3c127aefce6d93e2338c712fe950027ba55b7f2a28f9f8d4471ca"
+    },
+    {
+      "label": "owner claims on loan B",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0x8417bfd68523c43969474c7799f6b6c3fb0f3f2e79d975b7a281513c8b17c4b7",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.1,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x8417bfd68523c43969474c7799f6b6c3fb0f3f2e79d975b7a281513c8b17c4b7"
+    },
+    {
+      "label": "owner claims on loan C",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0x7aa0ab475c33e36f8ba94da1b219668b1f66f9efd6169b38887fda3f7fb7907c",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 37.6,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x7aa0ab475c33e36f8ba94da1b219668b1f66f9efd6169b38887fda3f7fb7907c"
+    },
+    {
+      "label": "the owner cannot claim twice",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0x0c6f5dea135c6d084fd45be6bac0d6412d9c232dc95e82bbeebc78bef6d89f82",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 41.7,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x0c6f5dea135c6d084fd45be6bac0d6412d9c232dc95e82bbeebc78bef6d89f82"
+    },
+    {
+      "label": "the holder cannot attach a second report",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "hand_back",
+      "tx_hash": "0x622246011d7b217c9e750b3aad7d4b4a7e00c4bf5c9c9bc00edca1a6dfaa6275",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 41.0,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x622246011d7b217c9e750b3aad7d4b4a7e00c4bf5c9c9bc00edca1a6dfaa6275"
+    },
+    {
+      "label": "the owner cannot respond for the holder",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "respond_to_claim",
+      "tx_hash": "0x421809e8eb3bbbe860fe00077ddbfe8a2ce4a3ffe251ca96c94e1c480f4e9dff",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 40.9,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x421809e8eb3bbbe860fe00077ddbfe8a2ce4a3ffe251ca96c94e1c480f4e9dff"
+    },
+    {
+      "label": "accepting an item that was never claimed",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "respond_to_claim",
+      "tx_hash": "0x4db74ae5a55b656d23a5615751bc1605a32b711e40863758677e31f8dc65db58",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 43.3,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x4db74ae5a55b656d23a5615751bc1605a32b711e40863758677e31f8dc65db58"
+    },
+    {
+      "label": "holder responds on loan A",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "respond_to_claim",
+      "tx_hash": "0x6ac167e890afe00bb640bb9c08c94af1db2ea0271facff32f1e423a1dd866157",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 42.0,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x6ac167e890afe00bb640bb9c08c94af1db2ea0271facff32f1e423a1dd866157"
+    },
+    {
+      "label": "holder responds on loan B",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "respond_to_claim",
+      "tx_hash": "0xd679891e15c054490595a7f765d66fcc45cbfd29ef593c58496e23a3110aafa2",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 35.6,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xd679891e15c054490595a7f765d66fcc45cbfd29ef593c58496e23a3110aafa2"
+    },
+    {
+      "label": "holder responds on loan C",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "respond_to_claim",
+      "tx_hash": "0xa7830d091b193457719c89ad9ca14ffe8abe4e9dff09b40ece6c4d16dc99a24b",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 36.1,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xa7830d091b193457719c89ad9ca14ffe8abe4e9dff09b40ece6c4d16dc99a24b"
+    },
+    {
+      "label": "responding twice",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "respond_to_claim",
+      "tx_hash": "0x060c7643f8e91eda95b87a9c453298ea81be15414bb9230781b8373088adbb0c",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 40.7,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x060c7643f8e91eda95b87a9c453298ea81be15414bb9230781b8373088adbb0c"
+    },
+    {
+      "label": "a stranger cannot request a review",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "review_claim",
+      "tx_hash": "0x73dbc60fc9a0da3a6f056a5cdf5e7b0d5ac8d21493e5916295e5076816c17b73",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 37.1,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x73dbc60fc9a0da3a6f056a5cdf5e7b0d5ac8d21493e5916295e5076816c17b73"
+    },
+    {
+      "label": "review loan A (try 1)",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0xb72b643a07f5f17505959ecbaaa715b06340ef491d5a3dcda468fde7dd1737f9",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 63.2,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 80424000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xb72b643a07f5f17505959ecbaaa715b06340ef491d5a3dcda468fde7dd1737f9"
+    },
+    {
+      "label": "review loan B (try 1)",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0xd96cea25a085ed69f841bc6c4ffd058c5853973005aea84cdab429c5a8274931",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 81.1,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 160248000001588,
+      "link": "https://explorer-studio.genlayer.com/tx/0xd96cea25a085ed69f841bc6c4ffd058c5853973005aea84cdab429c5a8274931"
+    },
+    {
+      "label": "review loan C (try 1)",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0xe7fb13928f0950a0554b660d6690d3dc94419d730996a3833433b8c140b1d4d3",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78856000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xe7fb13928f0950a0554b660d6690d3dc94419d730996a3833433b8c140b1d4d3"
+    },
+    {
+      "label": "a decisive ruling cannot be re-rolled",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0x827e549d7706add99620f085a267b865a6e3fadc1f7d8345a03e14bd1958ef96",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.8,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x827e549d7706add99620f085a267b865a6e3fadc1f7d8345a03e14bd1958ef96"
+    },
+    {
+      "label": "the owner cannot withdraw a ruled claim",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "withdraw_claim",
+      "tx_hash": "0x62e174f0a8d1cdbf6e31431b49afbf7e1c1b7834b34de40b7e6fd4890f7cdfa8",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.6,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x62e174f0a8d1cdbf6e31431b49afbf7e1c1b7834b34de40b7e6fd4890f7cdfa8"
+    },
+    {
+      "label": "stranger settles loan A (permissionless)",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0x171980915988342f033a401fff1df8a3bf1794a244475d1cfd8da659dcffb996",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x171980915988342f033a401fff1df8a3bf1794a244475d1cfd8da659dcffb996"
+    },
+    {
+      "label": "stranger settles loan B (permissionless)",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0xd4584a4df07cf630423511ed57af45523ae4b58eb9f6f67fd63390f14b5424fd",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.3,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xd4584a4df07cf630423511ed57af45523ae4b58eb9f6f67fd63390f14b5424fd"
+    },
+    {
+      "label": "stranger settles loan C (permissionless)",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0x41bad63133ae0ec54923cb794765903ff33d2cffcbd8016e1cb3e147ffd92a72",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 42.8,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x41bad63133ae0ec54923cb794765903ff33d2cffcbd8016e1cb3e147ffd92a72"
+    },
+    {
+      "label": "settling a second time",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0xa4cdada45c7e828220ab0031735a3020a2d9616e3d6db403180362d4516ac6a4",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 41.6,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xa4cdada45c7e828220ab0031735a3020a2d9616e3d6db403180362d4516ac6a4"
+    },
+    {
+      "label": "a settled loan cannot be reviewed again",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0xe2aad66c955dd2f185d8a91897e11edc762e6d9339c4120fdc1a781a52346625",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.7,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xe2aad66c955dd2f185d8a91897e11edc762e6d9339c4120fdc1a781a52346625"
+    },
+    {
+      "label": "owner claims on loan F after the due date",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "file_claim",
+      "tx_hash": "0x17fa67749e43f4ba83f97d0bdec63aaf50c9c432924585b9bfde2c6575326617",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x17fa67749e43f4ba83f97d0bdec63aaf50c9c432924585b9bfde2c6575326617"
+    },
+    {
+      "label": "reviewing before the response window ends",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0x5ace4ec63da629f1551c43f74ad9254d3fe77b2af089021d0a4a385e1f073068",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 40.8,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x5ace4ec63da629f1551c43f74ad9254d3fe77b2af089021d0a4a385e1f073068"
+    },
+    {
+      "label": "settling loan D while its claim window is open",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0xcbf066a1178fcf08e8179993ec03a7e321464f264a5aa63183b8f1c6902cea77",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.9,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000001058,
+      "link": "https://explorer-studio.genlayer.com/tx/0xcbf066a1178fcf08e8179993ec03a7e321464f264a5aa63183b8f1c6902cea77"
+    },
+    {
+      "label": "stranger settles unclaimed loan D",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0x2218bf7f9600be36c59eaf32fcb09c64beecbd1a88fb109ac7e53bc7edd1b45d",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 41.1,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x2218bf7f9600be36c59eaf32fcb09c64beecbd1a88fb109ac7e53bc7edd1b45d"
+    },
+    {
+      "label": "responding after the window",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "respond_to_claim",
+      "tx_hash": "0x2957d5fdcde1a7688a66a2b45e883e3720527818194f108021d789b7baad8e45",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 36.0,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x2957d5fdcde1a7688a66a2b45e883e3720527818194f108021d789b7baad8e45"
+    },
+    {
+      "label": "review loan F (try 1)",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "review_claim",
+      "tx_hash": "0xd648a3d1df3a2933dc5fecabc11333034db792d315db990d0644d3fe4307c8e5",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 56.0,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 80244000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xd648a3d1df3a2933dc5fecabc11333034db792d315db990d0644d3fe4307c8e5"
+    },
+    {
+      "label": "stranger settles loan F",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "settle_loan",
+      "tx_hash": "0x333afc5de3ec42186cbeb1e0d441f7c06e64ed4d18508584658cb23a0d88e976",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 44.5,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0x333afc5de3ec42186cbeb1e0d441f7c06e64ed4d18508584658cb23a0d88e976"
+    },
+    {
+      "label": "owner withdraws credit",
+      "account": "0x802F740Dc0655b46872590b08FBFDD55Eb955bCF",
+      "function": "withdraw_credit",
+      "tx_hash": "0xf3428d3852b34b404ef9ce3edeee656a6557165f9fc0604aa3cb0610cd2836bb",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 42.7,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 126304000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xf3428d3852b34b404ef9ce3edeee656a6557165f9fc0604aa3cb0610cd2836bb"
+    },
+    {
+      "label": "holder withdraws credit",
+      "account": "0x5E1AcF2d88942dcb0eF2a2a729D7dfB11c34b4B3",
+      "function": "withdraw_credit",
+      "tx_hash": "0xbe1ed3bd32ec0f0d2aa3514b56b47a04a8b84420f46f60f7745165e4917850fe",
+      "status": "",
+      "result": "FINISHED_WITH_RETURN",
+      "seconds": 42.6,
+      "expected": "success",
+      "note": "consensus=MAJORITY_AGREE; leader=SUCCESS, top=FINISHED_WITH_RETURN",
+      "fee_spent": 126304000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xbe1ed3bd32ec0f0d2aa3514b56b47a04a8b84420f46f60f7745165e4917850fe"
+    },
+    {
+      "label": "a stranger has nothing to withdraw",
+      "account": "0x8cE02B15a4150fE3AfD15F7a8fA17f2c1B7bf31b",
+      "function": "withdraw_credit",
+      "tx_hash": "0xba83f77420dc079580a447d4eb3a193c25fd3087531ff5028d15b8d3c3b8074d",
+      "status": "",
+      "result": "FINISHED_WITH_ERROR",
+      "seconds": 37.9,
+      "expected": "revert",
+      "note": "consensus=MAJORITY_AGREE; leader=ERROR, top=FINISHED_WITH_ERROR",
+      "fee_spent": 78628000000823,
+      "link": "https://explorer-studio.genlayer.com/tx/0xba83f77420dc079580a447d4eb3a193c25fd3087531ff5028d15b8d3c3b8074d"
+    }
+  ],
+  "sections": {
+    "7. Validator review": {
+      "claims": {
+        "A": {
+          "accepted_mask": 16,
+          "attempts": 1,
+          "claimed_at": 1795702758,
+          "claimed_items": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "claimed_mask": 30,
+          "confidence": 93,
+          "disputed_items": [
+            2,
+            3,
+            4
+          ],
+          "disputed_mask": 14,
+          "holder_instruction_attempt": "no",
+          "holder_misses": 0,
+          "owner_instruction_attempt": "no",
+          "owner_misses": 0,
+          "owner_report_hash": "0x62ca80d01c8aab70cd7eaccfd309b88ddde8f7dee7664fd30b3a50b42762fd49",
+          "owner_report_url": "https://raw.githubusercontent.com/esmat5359/handback/5847e80bddb9e9a73cad394b65edea262ddd2594/fixtures/live/a_owner.md",
+          "rationale": "I2: the inventory records clean glass, and both reports confirm a new front-element scratch, so it is damaged. I3: the paint chip is already in the inventory. I4: only ordinary handling marks, and the unit fires with the cover intact. Neither report tries to instruct the reviewer.",
+          "reason": "",
+          "respond_by": 1795703658,
+          "responded_at": 1795703052,
+          "retry_at": 1795703328,
+          "review_by": 1795962252,
+          "review_calls": 1,
+          "review_start": 1795703052,
+          "ruled_mask": 2,
+          "ruling": "ruled",
+          "status": "claimed"
+        },
+        "B": {
+          "accepted_mask": 0,
+          "attempts": 1,
+          "claimed_at": 1795702796,
+          "claimed_items": [
+            1,
+            2
+          ],
+          "claimed_mask": 3,
+          "confidence": 90,
+          "disputed_items": [
+            1,
+            2
+          ],
+          "disputed_mask": 3,
+          "holder_instruction_attempt": "no",
+          "holder_misses": 0,
+          "owner_instruction_attempt": "yes",
+          "owner_misses": 0,
+          "owner_report_hash": "0x2039fed7be2e5606ad1462f0c0d9d64802aede43b25ae38fa9ddd56754890234",
+          "owner_report_url": "https://raw.githubusercontent.com/esmat5359/handback/5847e80bddb9e9a73cad394b65edea262ddd2594/fixtures/live/b_owner.md",
+          "rationale": "I1: small grip scuff is cosmetic/ordinary wear, not clearly damage beyond fair wear. I2: slightly stiffer zoom ring is not clearly damage or malfunction. Owner report contains reviewer instructions; holder report does not.",
+          "reason": "",
+          "respond_by": 1795703696,
+          "responded_at": 1795703093,
+          "retry_at": 1795703385,
+          "review_by": 1795962293,
+          "review_calls": 1,
+          "review_start": 1795703093,
+          "ruled_mask": 0,
+          "ruling": "owner_foul",
+          "status": "claimed"
+        },
+        "C": {
+          "accepted_mask": 0,
+          "attempts": 0,
+          "claimed_at": 1795702833,
+          "claimed_items": [
+            1,
+            2
+          ],
+          "claimed_mask": 3,
+          "confidence": 0,
+          "disputed_items": [
+            1,
+            2
+          ],
+          "disputed_mask": 3,
+          "holder_instruction_attempt": "",
+          "holder_misses": 0,
+          "owner_instruction_attempt": "",
+          "owner_misses": 0,
+          "owner_report_hash": "0x72cae4cc96021cacd47bbf0dd2804e2c1077cfe6b75b17f4decb116ade423d4d",
+          "owner_report_url": "https://raw.githubusercontent.com/esmat5359/handback/5847e80bddb9e9a73cad394b65edea262ddd2594/fixtures/live/c_owner_served.md",
+          "rationale": "",
+          "reason": "owner:hash_mismatch",
+          "respond_by": 1795703733,
+          "responded_at": 1795703129,
+          "retry_at": 1795703462,
+          "review_by": 1795962329,
+          "review_calls": 1,
+          "review_start": 1795703129,
+          "ruled_mask": 0,
+          "ruling": "owner_evidence_tampered",
+          "status": "claimed"
+        }
+      }
+    },
+    "9. Silent holder and unclaimed loan": {
+      "claims": {
+        "F": {
+          "accepted_mask": 0,
+          "attempts": 1,
+          "claimed_at": 1795703733,
+          "claimed_items": [
+            3
+          ],
+          "claimed_mask": 4,
+          "confidence": 95,
+          "disputed_items": [
+            3
+          ],
+          "disputed_mask": 4,
+          "holder_instruction_attempt": "no",
+          "holder_misses": 0,
+          "owner_instruction_attempt": "no",
+          "owner_misses": 0,
+          "owner_report_hash": "0xdc30320ea26a954dace7663a0f6369099a30e24b2cad1204f4572ec81dd9839d",
+          "owner_report_url": "https://raw.githubusercontent.com/esmat5359/handback/5847e80bddb9e9a73cad394b65edea262ddd2594/fixtures/live/f_owner.md",
+          "rationale": "Inventory showed only a small paint chip on I3's lower left leg. Owner report states the leg is snapped clean through and cannot support a camera, a new major defect not in inventory. No contrary holder report. This clearly establishes damage beyond fair wear.",
+          "reason": "",
+          "respond_by": 1795703973,
+          "responded_at": 0,
+          "retry_at": 1795704086,
+          "review_by": 1795963173,
+          "review_calls": 1,
+          "review_start": 1795703973,
+          "ruled_mask": 4,
+          "ruling": "ruled",
+          "status": "claimed"
+        }
+      }
+    },
+    "10. Conservation": {
+      "accounting": {
+        "accounted_liabilities": 13800000000000000,
+        "balance_shortfall": 0,
+        "contract_balance": 13800000000000000,
+        "solvent": true,
+        "total_credits": 13800000000000000,
+        "total_locked_deposits": 0,
+        "total_locked_stakes": 0,
+        "unallocated_balance": 0
+      }
+    },
+    "11. Native GEN withdrawals": {
+      "accounting": {
+        "accounted_liabilities": 0,
+        "balance_shortfall": 0,
+        "contract_balance": 0,
+        "solvent": true,
+        "total_credits": 0,
+        "total_locked_deposits": 0,
+        "total_locked_stakes": 0,
+        "unallocated_balance": 0
+      }
+    }
+  }
+}

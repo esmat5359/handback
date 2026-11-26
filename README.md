@@ -96,4 +96,4 @@ It runs six loans between one owner and one holder with real validators and a re
 
 ## Deployment status
 
-Not deployed yet. Deploy `contracts/handback.py` to Studionet with no constructor arguments, record the address in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md), then run the live test.
+Deployed on GenLayer **Studionet** at [`0x241D5b8077498eA5572264Ea060643C5Ee377aE1`](https://explorer-studio.genlayer.com/address/0x241D5b8077498eA5572264Ea060643C5Ee377aE1). See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) and the full live verification report ([`reports/live-e2e-20261126T144417Z.md`](reports/live-e2e-20261126T144417Z.md), 127/127 checks passed).
