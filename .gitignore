@@ -6,3 +6,4 @@ __pycache__/
 # Live-test accounts and run state (private keys!) must never be committed.
 .live/
 reports/*.json
+.venv-live/

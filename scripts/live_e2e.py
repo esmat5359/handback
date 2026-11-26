@@ -87,6 +87,7 @@ class TxRecord:
     seconds: float = 0.0
     expected: str = "success"
     note: str = ""
+    fee_spent: int = 0
 
     @property
     def link(self) -> str:
@@ -284,7 +285,7 @@ class GenLayerChain(Chain):
         leaders = cls._get(consensus, "leader_receipt") if consensus is not None else None
         if isinstance(leaders, (list, tuple)) and leaders:
             leader_text = str(cls._get(leaders[0], "execution_result") or "").upper()
-        top = cls._get(receipt, "tx_execution_result_name")
+        top = cls._get(receipt, "tx_execution_result_name") or cls._get(receipt, "txExecutionResultName")
         top_text = str(getattr(top, "name", top) or "").upper()
         evidence = f"leader={leader_text or '-'}, top={top_text or '-'}"
         if leader_text in ("SUCCESS", "ERROR"):
@@ -324,10 +325,13 @@ class GenLayerChain(Chain):
             for attempt in range(4):
                 self._throttle()
                 try:
-                    tx_hash = self.client.write_contract(
-                        address=self.contract, function_name=function, account=self.accounts[name],
-                        args=args, value=value,
-                    )
+                    kw = dict(address=self.contract, function_name=function, account=self.accounts[name], args=args, value=value)
+                    if hasattr(self.client, "estimate_transaction_fees_for_write"):
+                        try: est = self.client.estimate_transaction_fees_for_write(**kw)
+                        except Exception: est = self.client.estimate_transaction_fees({"executionBudgetPerRound": 500_000_000_000_000})
+                        kw["fees"] = {"distribution": est["distribution"], "feeValue": est["feeValue"]}
+                        if est.get("messageAllocations"): kw["fees"]["messageAllocations"] = est["messageAllocations"]
+                    tx_hash = self.client.write_contract(**kw)
                     break
                 except Exception as error:  # noqa: BLE001
                     if attempt == 3 or not self._transient(error):
@@ -337,6 +341,12 @@ class GenLayerChain(Chain):
             receipt = self._wait(record.tx_hash)
             self._dump_receipt(record.tx_hash, receipt)
             record.status = self._field(receipt, "status_name", "statusName", "status")
+            if not record.status and isinstance(receipt, dict) and isinstance(receipt.get("lifecycle"), dict):
+                lc = receipt["lifecycle"]
+                record.status = str(lc.get("storedStatusName") or lc.get("projectedStatusName") or lc.get("storedStatus") or "")
+            if isinstance(receipt, dict) and isinstance((receipt.get("data") or {}).get("fee_accounting"), dict):
+                fa = receipt["data"]["fee_accounting"]
+                record.fee_spent = int(fa.get("primary_fee_spent") or 0)
             record.result, evidence = self._execution_outcome(receipt)
             vote = self._field(receipt, "result_name", "resultName")
             record.note = f"consensus={vote or '?'}; {evidence}"
@@ -604,8 +614,8 @@ class Scenario:
     # ---- phases
     def funding_needs(self) -> dict:
         n = len(LOANS)
-        return {"owner": n * STAKE + 2 * 10**14, "holder": n * DEPOSIT + 2 * 10**14,
-                "stranger": 10**14}
+        return {"owner": n * STAKE + 30 * 10**15, "holder": n * DEPOSIT + 30 * 10**15,
+                "stranger": 30 * 10**15}
 
     def print_funding_plan(self) -> None:
         log("test accounts (kept in .live/accounts.json, which is git-ignored):")
@@ -972,16 +982,16 @@ class Scenario:
             if wei == 0:
                 continue
             before = self.chain.balance(name)
-            self.tx(name, "withdraw_credit", [], label=f"{name} withdraws credit", section=section)
+            tx_rec = self.tx(name, "withdraw_credit", [], label=f"{name} withdraws credit", section=section)
             deadline = time.time() + 240
             after = before
             while time.time() < deadline:
                 after = self.chain.balance(name)
-                if after - before >= wei:
+                if after - before + tx_rec.fee_spent >= wei:
                     break
                 time.sleep(8)
             gained = after - before
-            self.report.check(section, f"{name} received {wei} wei", gained == wei, wei, gained)
+            self.report.check(section, f"{name} received {wei} wei", gained + tx_rec.fee_spent == wei and gained > 0, wei, gained + tx_rec.fee_spent)
             self.report.check(section, f"{name} ledger credit cleared", self.credit(name) == 0, 0,
                               self.credit(name))
             withdrawn[name] = True
